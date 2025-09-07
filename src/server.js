@@ -1,7 +1,7 @@
 const Hapi = require("@hapi/hapi");
 const routes = require("./routes");
-const Handler = require("./handler");
 const PredictService = require("./predict-service");
+const Handler = require("./handler");
 
 const init = async () => {
   const server = Hapi.server({
@@ -15,7 +15,7 @@ const init = async () => {
   server.route(routes(handler));
 
   await server.start();
-  console.log("Server running on", server.info.uri);
+  console.log("Server berjalan di", server.info.uri);
 };
 
 init();

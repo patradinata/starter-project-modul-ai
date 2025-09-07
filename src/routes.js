@@ -1,9 +1,9 @@
 const routes = (handler) => [
   {
     method: "POST",
-    path: "/predirect",
+    path: "/predict",
     handler: handler.getPredictResult,
-    option: {
+    options: {
       payload: {
         allow: "multipart/form-data",
         multipart: true,

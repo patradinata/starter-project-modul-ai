@@ -1,9 +1,8 @@
-const tf = require("@tensorflow/tfjs-node");
+const tf = require("@tensorflow/tfjs");
 const path = require("path");
 const metadata = require("../model/metadata.json");
 
 class PredictService {
-
   async predictImage(photo) {
     // membuat path ke file model tensorflow.js
     const modelPath = `file://${path.resolve(__dirname, "..", "model.json")}`;
